@@ -15,5 +15,11 @@ const htmlWebPackPlugin = new htmlWebPack(
 
 module.exports = {
     mode: "development", //production
-    plugins: [htmlWebPackPlugin]
+    plugins: [htmlWebPackPlugin],
+    module:{
+        rules:[
+            //babel解析jsx语法配置,排队node_modules目录
+            {test:/\.js|jsx$/,use:'babel-loader',exclude:/node_modules/},
+        ]
+    }
 }

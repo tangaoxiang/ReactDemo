@@ -8,6 +8,6 @@ let arr = [1,2,3,4,5];
 const div = <div id='div1'>
 {
     <div>{arr.map(c=><h5 key={c}>{c}</h5>)}</div>
-}
+}   
 </div>;
-ReactDom.render(div,document.getElementById("app"));
+ReactDom.render(div,document.getElementById("app")); 
